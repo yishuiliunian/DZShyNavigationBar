@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DZShyNavigationBar_Example' do
+  pod 'DZShyNavigationBar', :path => '../'
+
+  target 'DZShyNavigationBar_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
