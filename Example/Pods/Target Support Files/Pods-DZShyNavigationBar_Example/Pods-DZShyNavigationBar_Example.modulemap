@@ -1,0 +1,6 @@
+framework module Pods_DZShyNavigationBar_Example {
+  umbrella header "Pods-DZShyNavigationBar_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

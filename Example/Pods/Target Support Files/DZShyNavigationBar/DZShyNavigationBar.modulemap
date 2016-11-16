@@ -1,0 +1,6 @@
+framework module DZShyNavigationBar {
+  umbrella header "DZShyNavigationBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

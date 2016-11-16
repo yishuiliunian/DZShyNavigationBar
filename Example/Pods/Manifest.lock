@@ -1,0 +1,16 @@
+PODS:
+  - DZShyNavigationBar (0.1.0)
+
+DEPENDENCIES:
+  - DZShyNavigationBar (from `../`)
+
+EXTERNAL SOURCES:
+  DZShyNavigationBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DZShyNavigationBar: 7247451c3f2c0c138a6d637ef6b5a554bc643c02
+
+PODFILE CHECKSUM: 4f8aefa045b3d0cb6d18cde3fb5c21030116b1c6
+
+COCOAPODS: 1.1.1

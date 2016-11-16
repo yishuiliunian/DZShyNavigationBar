@@ -1,0 +1,22 @@
+{
+  "name": "DZShyNavigationBar",
+  "version": "0.1.0",
+  "summary": "A short description of DZShyNavigationBar.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/DZShyNavigationBar",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yishuiliunian": "yishuiliunian@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/DZShyNavigationBar.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "DZShyNavigationBar/Classes/**/*"
+}

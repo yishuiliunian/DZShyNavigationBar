@@ -1,0 +1,6 @@
+framework module Pods_DZShyNavigationBar_Tests {
+  umbrella header "Pods-DZShyNavigationBar_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
