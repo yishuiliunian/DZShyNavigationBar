@@ -139,7 +139,7 @@
     [super hostController:vc viewWillDisappear:animated];
     _currentNavigationController = vc.navigationController;
     _hostViewController = vc;
-    MRRemoveExtendSpecialLogic(self.currentNavigationController, @"shy-bar");
+//    MRRemoveExtendSpecialLogic(self.currentNavigationController, @"shy-bar");
 }
 
 - (void) hostController:(UIViewController *)vc viewDidDisappear:(BOOL)animated
