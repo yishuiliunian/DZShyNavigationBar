@@ -10,13 +10,13 @@
 #import <objc/runtime.h>
 #import "DZWeakProxy.h"
 #import <DZProgrameDefines.h>
+#import "DZInputViewController.h"
 
 @interface UINavigationController ()
 - (void) __viewWillLayoutSubviews;
 @end
 
 @interface DZShyExtendNavigationViewController ()
-@property (nonatomic, assign) BOOL localResetingFrame;
 @end
 
 static const char* kDZContainterShy = &kDZContainterShy;
@@ -39,14 +39,6 @@ static const char* kDZLocalResetingFrame = &kDZLocalResetingFrame;
     objc_setAssociatedObject(self, kDZLocalResetingFrame, @(localResetingFrame), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL) localResetingFrame
-{
-    return [objc_getAssociatedObject(self, kDZLocalResetingFrame) boolValue];
-}
-- (void) setContainsShy:(BOOL)containsShy
-{
-    objc_setAssociatedObject(self, kDZContainterShy, @(containsShy), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 - (BOOL) containsShy
 {
     NSNumber* containerShy = objc_getAssociatedObject(self, kDZContainterShy);
@@ -59,12 +51,9 @@ static const char* kDZLocalResetingFrame = &kDZLocalResetingFrame;
 {
     if (self.resetContainerView) {
         CGRect frame = self.resetContainerView.frame;
-        if (!self.localResetingFrame) {
-            [super __viewWillLayoutSubviews];
-            self.localResetingFrame = YES;
-        }
+        [super __viewWillLayoutSubviews];
         self.resetContainerView.frame = frame;
-        self.localResetingFrame  = NO;
+        [self.resetContainerView forceLayoutSubviews];
     } else {
         [super __viewWillLayoutSubviews];
     }
